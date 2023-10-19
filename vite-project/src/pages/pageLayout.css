@@ -1,0 +1,33 @@
+/** @format */
+.income-page h1,
+.expense-page h1,
+.saving-page h1 {
+	margin-top: 0;
+	font-size: 2rem;
+	padding: 1.5rem;
+    padding-bottom: 0;
+}
+.income-page,
+.expense-page,
+.saving-page {
+	background-color: aliceblue;
+}
+.table-form-layout {
+	display: flex;
+	justify-content: space-around;
+	align-items: first baseline;
+}
+.table-form-layout .table-section {
+	width: 70%;
+	overflow: hidden;
+	overflow-y: scroll;
+	height: 60vh;
+	margin: 2rem;
+    margin-bottom: 4rem;
+}
+.table-form-layout .table-section table {
+	margin: auto;
+}
+.table-form-layout .form-section {
+	width: 30%;
+}

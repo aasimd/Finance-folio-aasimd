@@ -8,6 +8,12 @@ const ADD_EXPENSE = "addExpense";
 const ADD_SAVING = "addSaving";
 const SET_LOADING = "setLoading";
 const CATCH_ERROR = "catchError";
+const SET_INCOMES_CATEGORY = "setIncomesCategory";
+const SET_SORT_INCOMES = "setSortIncomes";
+const SET_EXPENSES_CATEGORY = "setExpensesCategory";
+const SET_SORT_EXPENSES = "setSortExpenses";
+const SET_SAVINGS_CATEGORY = "setSavingsCategory";
+const SET_SORT_SAVINGS = "setSortSavings";
 
 export const fetchIncomes = () => async (dispatch) => {
 	dispatch({ type: SET_LOADING, payload: true });
@@ -27,7 +33,7 @@ export const fetchIncomes = () => async (dispatch) => {
 	dispatch({ type: SET_LOADING, payload: false });
 };
 
-export const addIncome = () => async (dispatch, income) => {
+export const addIncome = (income) => async (dispatch) => {
 	dispatch({ type: SET_LOADING, payload: true });
 	const requestBody = income;
 	try {
@@ -64,7 +70,7 @@ export const fetchExpenses = () => async (dispatch) => {
 	dispatch({ type: SET_LOADING, payload: false });
 };
 
-export const addExpense = () => async (dispatch, expense) => {
+export const addExpense = (expense) => async (dispatch) => {
 	dispatch({ type: SET_LOADING, payload: true });
 	const requestBody = expense;
 	try {
@@ -100,7 +106,7 @@ export const fetchSavings = () => async (dispatch) => {
 	dispatch({ type: SET_LOADING, payload: false });
 };
 
-export const addSaving = () => async (dispatch, saving) => {
+export const addSaving = (saving) => async (dispatch) => {
 	dispatch({ type: SET_LOADING, payload: true });
 	const requestBody = saving;
 	try {
@@ -118,3 +124,21 @@ export const addSaving = () => async (dispatch, saving) => {
 	}
 	dispatch({ type: SET_LOADING, payload: false });
 };
+
+export const setIncomesCategory = (dispatch, e) =>
+	dispatch({ type: SET_INCOMES_CATEGORY, payload: e.target.value });
+
+export const setSortIncomes = (dispatch, e) =>
+	dispatch({ type: SET_SORT_INCOMES, payload: e.target.checked });
+
+export const setExpensesCategory = (dispatch, e) =>
+	dispatch({ type: SET_EXPENSES_CATEGORY, payload: e.target.value });
+
+export const setSortExpenses = (dispatch, e) =>
+	dispatch({ type: SET_SORT_EXPENSES, payload: e.target.checked });
+
+export const setSavingsCategory = (dispatch, e) =>
+	dispatch({ type: SET_SAVINGS_CATEGORY, payload: e.target.value });
+
+export const setSortSavings = (dispatch, e) =>
+	dispatch({ type: SET_SORT_SAVINGS, payload: e.target.checked });
