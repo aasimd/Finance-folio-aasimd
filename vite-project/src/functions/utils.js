@@ -27,3 +27,19 @@ export const filterItems = (items, isSorted, category) => {
 			: [...sortedItems].filter((item) => item.category === category);
 	return filteredByCategory;
 };
+
+export const getAmountPerCategories = (items) => {
+	const categoriesAmount = [];
+	const uniqueCategories = items.reduce(
+		(acc, item) =>
+			acc.includes(item.category) ? acc : [...acc, item.category],
+		[]
+	);
+	uniqueCategories.forEach((category) => {
+		const totalAmount = items
+			.filter((item) => item.category === category)
+			.reduce((acc, item) => acc + item.amount, 0);
+		categoriesAmount.push({ category, totalAmount });
+	});
+	return categoriesAmount;
+};

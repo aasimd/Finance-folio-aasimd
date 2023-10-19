@@ -1,20 +1,27 @@
 /** @format */
 
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import { setActiveLinks } from "../../functions/utils";
 import "./NavBar.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export const NavBar = () => {
+	const navigate = useNavigate();
 	return (
 		<div className="nav-bar">
-			<div>
-				<h1>
-					<NavLink style={setActiveLinks} to="/">
-						FinanceFolio
-					</NavLink>
-				</h1>
+			<div className="first-nav-div">
+				<h1 onClick={() => navigate("/")}>FinanceFolio </h1>
+				<span>
+					<b>Source Code: </b>
+					<a
+						target="_blank"
+						href="https://github.com/aasimd/Finance-folio-aasimd"
+					>
+						<FontAwesomeIcon icon={faGithub} />
+					</a>
+				</span>
 			</div>
 			<ul>
 				<li>

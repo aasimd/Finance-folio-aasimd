@@ -1,11 +1,13 @@
 /** @format */
 .income-page h1,
 .expense-page h1,
-.saving-page h1 {
+.saving-page h1,
+.finance-report-page h1 {
 	margin-top: 0;
 	font-size: 2rem;
 	padding: 1.5rem;
-    padding-bottom: 0;
+	padding-bottom: 0;
+	margin-bottom: 10px;
 }
 .income-page,
 .expense-page,
@@ -23,7 +25,7 @@
 	overflow-y: scroll;
 	height: 60vh;
 	margin: 2rem;
-    margin-bottom: 4rem;
+	margin-bottom: 4rem;
 }
 .table-form-layout .table-section table {
 	margin: auto;

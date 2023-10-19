@@ -1,0 +1,36 @@
+/** @format */
+
+.finance-report-page {
+	background-color: rgb(255, 245, 245);
+	height: 100vh;
+}
+.finance-report-page form label {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+.finance-report-page form select {
+	font-size: 1.1rem;
+	font-weight: 500;
+	background-color: aliceblue;
+	color: #222222;
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 10px;
+}
+.finance-report-page form {
+	display: flex;
+	gap: 2rem;
+	margin: auto;
+	justify-content: center;
+    padding: 10px;
+}
+.finance-report-page form input[type="submit"] {
+	background-color: #333333;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 10px;
+	font-size: 1.1rem;
+}
+.finance-report-page form input[type="submit"]:hover {
+	background-color: #666666;
+}

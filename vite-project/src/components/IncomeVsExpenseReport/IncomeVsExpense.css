@@ -1,0 +1,32 @@
+/** @format */
+.incomeVsExpenseReport {
+	width: 80%;
+	/* border: 1px solid; */
+	margin: auto;
+	padding: 20px;
+	background-color: white;
+	border-radius: 20px;
+    height: 70vh;
+}
+
+.incomeVsExpenseReport h2 {
+	color: coral;
+}
+
+.incomeVsExpenseReport ul li {
+	border: 2px solid;
+	width: 30%;
+	font-size: 1.2rem;
+	color: #333333;
+	padding: 20px;
+	border-radius: 20px;
+	font-weight: 600;
+}
+.incomeVsExpenseReport ul li b {
+	color: black;
+}
+.incomeVsExpenseReport ul {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
