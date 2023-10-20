@@ -18,20 +18,24 @@ export const ExpenseBreakdown = () => {
 						<tr>
 							<th>Category</th>
 							<th>Amount (in $)</th>
+							<th>%</th>
 						</tr>
 					</thead>
 					<tbody>
 						{expensesCategories.map((e) => {
+							const percent = (e.totalAmount / expensesTotal) * 100;
 							return (
 								<tr>
 									<td>{e.category}</td>
 									<td>{e.totalAmount}</td>
+									<td>{percent.toFixed(1)}</td>
 								</tr>
 							);
 						})}
 						<tr>
 							<th>Total</th>
 							<th>{expensesTotal}</th>
+							<th>100</th>
 						</tr>
 					</tbody>
 				</table>
