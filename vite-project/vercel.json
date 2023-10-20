@@ -1,0 +1,13 @@
+{
+	"rewrites": [
+		{ "source": "/", "destination": "/index.html" },
+		{ "source": "/(.*)", "destination": "/index.html" },
+		{ "source": "/expenses", "destination": "/expenses/index.html" },
+		{ "source": "/incomes", "destination": "/incomes/index.html" },
+		{ "source": "/savings", "destination": "/savings/index.html" },
+		{
+			"source": "/finance_reports",
+			"destination": "/finance_reports/index.html"
+		}
+	]
+}
